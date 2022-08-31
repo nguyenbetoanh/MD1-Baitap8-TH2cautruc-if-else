@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cach 1-->
+<input type=text" id="taikhoan">
+<input type="password" id="mk">
+<button onclick="annut()">Login</button>
+<h1 id="hien"></h1>
+<h1 id="hien2"></h1>
+<script>
+    function annut(){
+        var tentk =document.getElementById("taikhoan").value
+        var matkhau =document.getElementById("mk").value
+        var tkdung ='Admin'
+        var mkdung ='TheMaster'
+        var koGiaTri ='null'
+         if(tentk ==  tkdung ){
+              document.getElementById("hien").innerHTML= '<h1 style="color: red">nhập mật khẩu dung</h1>'
+        }else if(tentk == koGiaTri) {
+             document.getElementById("hien").innerHTML = ' <h1 style="color:red">Cancel</h1>'
+         }
+         else
+             {
+                 document.getElementById("hien").innerHTML = 'tai khoan sai--Hãy nhập lại tai khoan'
+             }
+             if (matkhau == mkdung) {
+                 document.getElementById('hien2').innerHTML = ' <h1 style="color:blue">nhap pass dung</h1>'
+             } else if (mkdung == koGiaTri) {
+                 document.getElementById('hien2').innerHTML = ' <h1 style="color:red">Cancel</h1>'
+             } else {
+                 document.getElementById('hien2').innerHTML = ('mật khẩu sai--Hãy nhập lại mật khẩu ')
+
+             }
+    }
+</script>
+<!--cach2-->
+<script>
+    let tk=+prompt('hãy nhập tìa khoản ');
+    let tkdung='Admin'
+    let voNghia ='null'
+   if (tk=tkdung){
+       alert('nhap mat khau please')
+   }else if(tk=voNghia){
+       alert('khong chap nhan kis tu nay')
+   }else
+       alert('ten tai khoan sai, Xin nhap lai')
+    let mk=+prompt('hay nhap mat khau')
+    let mkdung='TheMaster'
+    if(mk=mkdung){
+        alert('tai khoan mat khau chinh xac')
+    }else if(mk=voNghia){
+        alert('khong chap nhan kis tu nay')
+    }else
+        alert('sai mat khau, vui long nhap lai')
+</script>
+
+</body>
+</html>
